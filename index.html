@@ -72,30 +72,42 @@
         </article>
       </main>
       <aside id="sidebar">
-        <section>
-          <h2>Busca</h2>
-          <input type="text" placeholder="Pesquise no Blog" />
-          <button id="buscar">Buscar</button>
+        <section id="search-bar">
+          <h4>Busca</h4>
+          <form>
+            <input type="text" placeholder="Pesquise no Blog" />
+            <input type="submit" value="Buscar" />
+          </form>
+        </section>
+        <section id="categories">
+          <h4>Categorias</h4>
+          <nav>
+            <ul>
+              <li><a href="#">Paisagens</a></li>
+              <li><a href="#">Aventura</a></li>
+              <li><a href="#">Viagens Longas</a></li>
+              <li><a href="#">Florestas</a></li>
+              <li><a href="#">Cachoreiras</a></li>
+            </ul>
+          </nav>
         </section>
         <section>
-          <h2>Categorias</h2>
-          <ul>
-            <li><a href="#">Paisagens</a></li>
-            <li><a href="#">Aventura</a></li>
-            <li><a href="#">Viagens Longas</a></li>
-            <li><a href="#">Florestas</a></li>
-            <li><a href="#">Cachoreiras</a></li>
-          </ul>
-        </section>
-        <section>
-          <h2>Tags</h2>
+          <h4>Tags</h4>
+          <div id="tags-container">
+            <a href="#">Lifestyle</a>
+            <a href="#">Viagem</a>
+            <a href="#">Japão</a>
+            <a href="#">Rio</a>
+            <a href="#">Muralha</a>
+            <a href="#">Templo</a>
+          </div>
         </section>
       </aside>
     </div>
-    <footer>
+    <footer id="footer">
       <h2>Blog</h2>
       <p>Os melhores registros de aventuras</p>
-      2024 &copy AnaHiraiwa
+      <p>2024 &copy AnaHiraiwa</p>
     </footer>
   </body>
 </html>
