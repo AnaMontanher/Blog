@@ -12,31 +12,15 @@ body {
 
 ul {
   list-style: none;
+  padding: 0;
 }
+
 a {
   text-decoration: none;
   color: #444;
   transition: 0.4s;
 }
 
-img {
-  width: 60%;
-}
-/*testando Flex: FLEX GROW FLEX SHRINK FLEX BASIS*/
-nav {
-  flex: 1 10 200px;
-  padding: 20px 50px;
-}
-main {
-  flex: 50 5 200px;
-}
-
-footer {
-  flex: 1 10 200px;
-}
-aside {
-  flex: 1 10 300px;
-}
 /* Navbar */
 #navbar {
   padding: 1.5rem 2.5rem;
@@ -51,19 +35,120 @@ aside {
   align-items: center;
 }
 
-#nav-links li {
-  display: inline;
+#nav-links {
+  display: flex;
+  gap: 1rem;
 }
 
+/* Main */
 .container {
+  max-width: 1300px;
   display: flex;
-  padding: 20px 50px;
+  margin: 0 auto;
+  gap: 3rem;
+  padding: 2rem 2.5rem;
 }
 
 #posts-container {
-  width: 50%;
+  flex: 3 1 0;
 }
 
+/*#posts-container será 3 vezes maior que os outros conteúdos.*/
+/*Do .container, portanto vai ser 3x maior q o #sidebar*/
+.post {
+  margin-bottom: 2.5rem;
+}
+
+.post img {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.title,
+.description,
+.author {
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.author {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Sidebar */
+
 #sidebar {
-  width: 50%;
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#sidebar h4 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+#search-bar,
+#categories,
+#tags {
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+}
+
+#search-bar form {
+  display: flex;
+}
+#search-bar input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+}
+
+#search-bar input[type="submit"] {
+  cursor: pointer;
+  background: #37a1f7;
+  color: #fff;
+  border: none;
+}
+
+#categories li {
+  margin-bottom: 1.5rem;
+}
+#tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#tags-container a {
+  background: #ddd;
+  color: #444;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.3rem;
+  transition: none;
+}
+
+/* footer */
+#footer {
+  border-top: 2px solid #ddd;
+  padding: 3rem;
+  text-align: center;
+}
+
+#footer h2,
+#footer p {
+  margin-bottom: 1rem;
+}
+
+/*Responsivo*/
+
+@media (max-width: 450px) {
+  .container {
+    flex-wrap: wrap;
+  }
 }
